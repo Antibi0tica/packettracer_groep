@@ -1,0 +1,5 @@
+[
+    { "GebruikerID": 1, "Naam": "Docent Daniël", "Rol": "docent" },
+    { "GebruikerID": 2, "Naam": "Student Sara", "Rol": "student" },
+    { "GebruikerID": 3, "Naam": "Student Tim", "Rol": "student" }
+]
