@@ -14,13 +14,13 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $groepNaam = $_POST["Groepsnaam"];
     $code = generateGroupCode();
 
-    $groepen = readJson("groepen.json");
+    $groepen = readJson("groepen.json"); // Haal de gegevens van de groepen.json
 
-    $groepen[] = [
-        "GroepID" => count($groepen) + 1,
-        "Groepsnaam" => $groepNaam,
-        "Code" => $code,
-        "BeheerderID" => $user["GebruikerID"]
+    $groepen[] = [ // Maak van de groepen variabel die je hiervoor hebt een updated versie waarbij
+        "GroepID" => count($groepen) + 1, // GroepsID met 1 omhoog gaat
+        "Groepsnaam" => $groepNaam, // Groepsnaam wat al word aangemaakt hieronder
+        "Code" => $code, // Hierbij haal je de "generateGroupCode()" functie aan
+        "BeheerderID" => $user["GebruikerID"] 
     ];
 
     writeJson("groepen.json", $groepen);

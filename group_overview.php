@@ -23,6 +23,7 @@ $leden = readJson("groepsleden.json");
 <?php if ($user["Rol"] === "docent"): ?>
 
     <a href="group_create.php">➕ Nieuwe groep aanmaken</a>
+    <a href="group_remove.php">➖ Verwijder groep</a>
     <h3>Jouw groepen</h3>
 
     <?php foreach ($groepen as $g): ?>
